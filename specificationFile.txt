@@ -30,7 +30,9 @@ we cannot name algorithm of test or random number generation
 
 add infinity and NaN （Quiet NaN)and SNaN(Signaling NaN) and 0(Zero) to floating point random number generation
 
-add minus value
+add minus value  
+
+add infinitly tiny
 
 need to generate decimal floating point random value
 
