@@ -1,0 +1,42 @@
+Test specification file
+implemented by XML
+
+describe version code
+describe source code for test in Intel and OpenPower
+
+classify file in 5 category
+
+file1: Test specification describe file
+file2: Test specification describe file + output from Intel
+file3: Test specification describe file + output from OpenPower
+file4: Test specification describe file + output from Intel + output from OpenPower 
+file5: Test specification describe file + comparison summary+ output from Intel + output from OpenPower 
+
+output from Intel and openpower is described afterward
+
+Need to join specification description and test result in same file?
+
+Comparison result is described afterward or in front? If in front, description must be reordered. 
+
+Can comment
+
+How to define floating point random number generation algorithm
+
+define floating point random number generation algorithm by Python in specification file
+
+define testing code defined in C language
+
+we cannot name algorithm of test or random number generation
+
+add infinity and NaN （Quiet NaN)and SNaN(Signaling NaN) and 0(Zero) to floating point random number generation
+
+add minus value
+
+need to generate decimal floating point random value
+
+write data format of output from x86 and OpenPower
+
+Execute Test C language code by command and pass parameter by command argument
+
+example
+<?xml version='1.0' encoding='UTF-8'?＞
