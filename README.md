@@ -16,4 +16,6 @@ Result of intrinsics of Intel x86 and OpenPOWER must be equal.If Error or Except
 * reference  
 
 Linux on Power Porting Guide: Vector Intrinsics  
-https://openpowerfoundation.org/?resource_lib=linux-power-porting-guide-vector-intrinsics
+https://openpowerfoundation.org/?resource_lib=linux-power-porting-guide-vector-intrinsics  
+
+SLEEF: A Portable Vectorized Library of C Standard Mathematical Functions(Naoki Shibata , Member, IEEE and Francesco Petrogalli 2020)
