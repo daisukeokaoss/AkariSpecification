@@ -43,3 +43,8 @@ Execute Test C language code by command and pass parameter by command argument
 
 example
 <?xml version='1.0' encoding='UTF-8'?＞
+
+version code description element
+<AkariVersion>
+
+
