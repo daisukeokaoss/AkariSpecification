@@ -13,7 +13,7 @@ Intel x86 Intrinsics and OpenPOWER Intrinsics are not one to one correspondance.
 Result of intrinsics of Intel x86 and OpenPOWER must be equal.If Error or Exception occurres,These must occurre in Intel x86 and OpenPOWER ISA as same.If result is no same,unexpected and unpredictable bug may be occurre.Not reproducable bug may lead to fatal resut.So we must test Intel Intrinsic and currespondance of OpenPOWER ISA automatically.So we need testing framework.
 
 * Structure of testing framework  
-Exchange data between Intel x86 and OpenPOWER machine by network or file transfer. Testing framework must be constructed by Python and C language.
+Exchange data between Intel x86 and OpenPOWER machine by network or file transfer. Testing framework must be constructed by Python and C language.Input same data in x86 intrinsic function and correspondance of OpenPOWER ISA and compare these output and make sure it is same.
 
 
 * reference  
