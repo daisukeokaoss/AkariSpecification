@@ -1,4 +1,4 @@
-# Akari Specification
+# Testing Framework Akari Specification
 Testing Framework for HPC  
 Solving CPU platform dependency  
 
