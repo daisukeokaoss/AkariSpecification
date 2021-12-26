@@ -17,7 +17,7 @@ Result of intrinsics of Intel x86 and OpenPOWER must be equal.If Error or Except
 Exchange data between Intel x86 and OpenPOWER machine by network or file transfer. Testing framework must be constructed by Python and C language.Input same data in x86 intrinsic function and correspondance of OpenPOWER ISA and compare these output and make sure it is same.
 
 
-* reference  
+reference  
 
 Linux on Power Porting Guide: Vector Intrinsics  
 https://openpowerfoundation.org/?resource_lib=linux-power-porting-guide-vector-intrinsics  
