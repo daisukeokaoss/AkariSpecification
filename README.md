@@ -1,5 +1,5 @@
 # Akari Specification
-Testing Framework for HPC Akari  
+Testing Framework for HPC  
 Solving CPU platform dependency  
 
 Specification of testing framework for porting and optimize Intel x86 Intrinsic function to OpenPOWER
