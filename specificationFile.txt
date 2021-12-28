@@ -53,3 +53,7 @@ version code description element
    </RandomNumberAlgorithm>
    </IntrinsicCode></IntrinsicCode>
 <TestingCode>
+<InputData>
+<row><x>1.23</x><y>3.56</y></row>
+<row><x>1.556</x><y>3.44</y></row>
+</InputData>
