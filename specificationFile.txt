@@ -47,3 +47,5 @@ example
 version code description element
 <AkariVersion>1.0</AkariVersion>
 <TestingCode>
+   <RandomNumberAlgorithm>
+   </RandomNumberAlgorithm>
