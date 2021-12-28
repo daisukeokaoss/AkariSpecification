@@ -45,6 +45,5 @@ example
 <?xml version='1.0' encoding='UTF-8'?＞
 
 version code description element
-<AkariVersion>
-
-
+<AkariVersion>1.0</AkariVersion>
+<TestingCode>
