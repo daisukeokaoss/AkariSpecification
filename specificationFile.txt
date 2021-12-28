@@ -49,3 +49,4 @@ version code description element
 <TestingCode>
    <RandomNumberAlgorithm>
    </RandomNumberAlgorithm>
+   </IntrinsicCode></IntrinsicCode>
