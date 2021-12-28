@@ -40,7 +40,7 @@ write data format of output from x86 and OpenPower
 
 Execute Test C language code by command and pass parameter by command argument
 
-
+separate intrinsic execution code and random floating point number algorithm
 example
 <?xml version='1.0' encoding='UTF-8'?＞
 
