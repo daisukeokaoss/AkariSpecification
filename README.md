@@ -1,4 +1,7 @@
 # Testing Framework Akari Specification
+
+[Development Discord Server](https://discord.gg/J6DgQcGEPf)
+
 Testing Framework for HPC  
 Solving CPU platform dependency  
 
