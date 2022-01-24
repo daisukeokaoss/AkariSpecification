@@ -19,6 +19,9 @@ Result of intrinsics of Intel x86 and OpenPOWER must be equal.If Error or Except
 * Structure of testing framework  
 Exchange data between Intel x86 and OpenPOWER machine by network or file transfer. Testing framework must be constructed by Python and C language.Input same data in x86 intrinsic function and correspondance of OpenPOWER ISA and compare these output and make sure it is same.
 
+* Connect Intel and OpenPower by Python network framework  
+https://github.com/Tribler/py-ipv8
+
 
 reference  
 
