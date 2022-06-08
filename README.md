@@ -13,7 +13,6 @@ On the other hand,IBM Power and ARM are RISC(Reduced Instruction Set Computer) a
 So many supercomputer use RISC.
 But No 1 of market share of supercomputer is Intel because many Linux application is made for Intel.
 So if  application for Intel x86-64 can run RISC like ARM or OpenPOWER by very optimized way. It’s great advancement of Computer Science and Technology.
-
 There are many SIMD Intel x86 intrinsic function.Intel intrinsic function runs only on Intel,not on OpenPOWER Systems.So we need to port Intel x86 intrinsic code to OpenPOWER equivalent code to run application by good performance on OpenPOWER Systems.But porting Intel x86 Intrinsics to OpenPOWER Intrinsics is technically challenging.
 
 * Obstacle of this project  
