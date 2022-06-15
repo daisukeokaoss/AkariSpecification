@@ -5,7 +5,13 @@
  **/
 @font-face {
   font-family: "bizd";
+  font-weight: normal;
   src: url("..fonts/BIZUDGothic-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "bizd";
+  font-weight: bold;
+  src: url("../fonts/BIZUDGothic-Bold.ttf") format("truetype");
 }
 
 * {
