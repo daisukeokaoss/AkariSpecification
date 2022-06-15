@@ -5,7 +5,7 @@
  **/
  @font-face {
   font-family: 'bizd';
-  src: url('../fonts/BIZUDGothic-Bold.ttf') format('truetype');
+  src: url('..fonts/BIZUDGothic-Regular.ttf') format('truetype');
 }
 
 * {
