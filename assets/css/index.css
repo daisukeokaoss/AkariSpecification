@@ -12,6 +12,7 @@
   font-family: "bizd", monospace !important;
 }
 ul {
+  margin: 0;
   display: inline-block;
 }
 #main {
