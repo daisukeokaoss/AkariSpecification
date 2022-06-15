@@ -12,7 +12,7 @@
   font-family: "bizd", monospace !important;
 }
 ul {
-  float: left;
+  display: inline-block;
 }
 #main {
   width: 100%;
