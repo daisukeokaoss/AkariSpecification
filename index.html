@@ -1,67 +1,70 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport">
-<style>
-code {
-    background-color: #eee;
-    border-radius: 3px;
-    font-family: courier, monospace;
-    padding: 0 3px;
-}
-p {
-    margin-top: 2em;
-    margin-bottom: 2em;
-}
-</style>
-<title>Akari the testing framework for HPC</title>
-<body
-<div style="width:100%;">
-<h1 style="text-align: center;"><img src="/flower.jpg" alt="flower" style="height:1em; vertical-align: middle;" />Akari the testing framework for HPC<img src="/flower.jpg" alt="flower" style="height:1em; vertical-align: middle;
+  <meta charset="UTF-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <style>
+      code {
+        background-color: #eee;
+        border-radius: 3px;
+        font-family: courier, monospace;
+        padding: 0 3px;
+      }
+      p {
+        margin-top: 2em;
+        margin-bottom: 2em;
+      }
+    </style>
+    <title>Akari the testing framework for HPC</title>
+</head>
+<body>
+  <div style="width:100%;">
+    <h1 style="text-align: center;"><img src="/flower.jpg" alt="flower" style="height:1em; vertical-align: middle;" />Akari the testing framework for HPC<img src="/flower.jpg" alt="flower" style="height:1em; vertical-align: middle;
 " /></h1>
-<div style="text-align: center; width: 100%;">
-<img src="/AkariSpecification.jpg" alt="AkariSpecification" style="height:6em;" />
-</div>
-<h2>Akari the Testing Framework for optimizing and porting x86 Intrinsics to OpenPOWER</h2>
-<div>
-<p>
+    <div style="text-align: center; width: 100%;">
+      <img src="/AkariSpecification.jpg" alt="AkariSpecification" style="height:6em;" />
+    </div>
+    <h2>Akari the Testing Framework for optimizing and porting x86 Intrinsics to OpenPOWER</h2>
+    <div>
+    <p>
 Intel x86-64 CPU are everywhere. From laptop PC to supercomputer. Intel x86-64 is CISC(Complex Instruction Set Computer) and very long history. And once code runs on Intel x86-64, it must run Intel forever. So Intel carries a lot of past heritage. On the other hand,IBM Power and ARM are RISC(Reduced Instruction Set Computer) and its same in the aspect of “it runs once, it must run forever” but instruction set are simple and RISC can use relatively new technology. So many supercomputer use RISC. But No 1 of market share of supercomputer is Intel because many Linux application is made for Intel. So if application for Intel x86-64 can run RISC like ARM or OpenPOWER by very optimized way. It’s great advancement of Computer Science and Technology. There are many SIMD Intel x86 intrinsic function.Intel intrinsic function runs only on Intel,not on OpenPOWER Systems.So we need to port Intel x86 intrinsic code to OpenPOWER equivalent code to run application by good performance on OpenPOWER Systems.But porting Intel x86 Intrinsics to OpenPOWER Intrinsics is technically challenging.
-</p>
+    </p>
 
-<p>
+    <p>
 Intrinsic functions is a way to directly access SIMD instructions from high level language like C. Intrinsic functions are specific to CPU architecture. Intel has specific intrinsic function and OpenPOWER and ARM has. And Intel intrinsic function are not 1 to 1 correspondence to other RISC intrinsic function.  So porting is needed. porting has unique wrapping structure like below.
-</p>
-<div style="background-color: #eee;">
-<code>
+    </p>
+    <div style="background-color: #eee;">
+      <code>
 extern __inline __m128d __attribute__((__gnu_inline__, __always_inline__,__artificial__))<br />
 _mm_add_pd (__m128d __A, __m128d __B)<br />
 {<br />
    return (__m128d) ((__v2df)__A + (__v2df)__B);<br />
 }<br />
-</code>
-</div>
-<div>
-<p>
+      </code>
+    </div>
+    <div>
+      <p>
 Porting seems easy but one problem exist. Is behavior same? Need validating correctness of porting. But we cannot make sure porting is correct by gazing source code. Way to validate source code of porting is- for example source code shown upword- Input random value to __A and __B to Intel intrinsic function and that of ported to OpenPOWER or other RISC architecture.And get return value from these function and make sure return value is same between Intel intrinsic functions and that of ported to other RISC.To make this testing framework. We have to mutually connect Intel and OpenPOWER or other RISC on the cloud computer by internet or other computer network.
-</p>
-</div>
-<p style="font-weight: bold;">AkariSpecification</p>
-<p>Oka Daisuke (Principal Software Developer)</p>
-<p>Akari Chang (Principal Software Developer) SHA256:BP6OOuFSr9nAkgDQLRUZ3f2tOhznOBBN0DuZIgGd5gg</p>
-<p>We are atheists, so we don't want to follow any religious leaders, but sometimes we respect what they say.</p>
-<p><a href="mailto:info@akari.mn">Send email</a></p>
-</div>
-<hr/>
-<div>
-<h2>Links</h2>
-<p>
-<a href="https://arxiv.org/abs/2001.09258">SLEEF: A Portable Vectorized Library of C Standard Mathematical Functions</a>
-</p>
-<p>
-<a href="https://openpowerfoundation.org/specifications/vectorintrinsicportingguide/">OpenPOWER Foundation</a>
-</p>
-</div>
+      </p>
+    </div>
+    <div>
+      <p style="font-weight: bold;">AkariSpecification</p>
+      <p>Oka Daisuke (Principal Software Developer)</p>
+      <p>Akari Chang (Principal Software Developer) SHA256:BP6OOuFSr9nAkgDQLRUZ3f2tOhznOBBN0DuZIgGd5gg</p>
+      <p>We are atheists, so we don't want to follow any religious leaders, but sometimes we respect what they say.</p>
+      <p><a href="mailto:info@akari.mn">Send email</a></p>
+     </div>
+  </div>
+  <hr/>
+  <div>
+    <h2>Links</h2>
+    <p>
+      <a href="https://arxiv.org/abs/2001.09258">SLEEF: A Portable Vectorized Library of C Standard Mathematical Functions</a>
+    </p>
+    <p>
+    <a href="https://openpowerfoundation.org/specifications/vectorintrinsicportingguide/">OpenPOWER Foundation</a>
+    </p>
+  </div>
 </div>
 </body>
 </html>
