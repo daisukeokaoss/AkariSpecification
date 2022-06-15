@@ -3,7 +3,14 @@
  * MIT License
  * Copyright (c) 2022 林崎 優之 (Hayashizaki Masayuki)
  **/
+ @font-face {
+  font-family: 'bizd';
+  src: url('../fonts/BIZUDGothic-Bold.ttf') format('truetype');
+}
 
+* {
+  font-family: 'bizd', monospace !important;
+}
 #main {
   width: 100%;
 }
