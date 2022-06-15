@@ -4,12 +4,12 @@
  * Copyright (c) 2022 林崎 優之 (Hayashizaki Masayuki)
  **/
 @font-face {
-  font-family: "bizd";
+  font-family: "HackGen";
   font-weight: normal;
   src: url("../fonts/HackGenConsole-Regular.ttf") format("truetype");
 }
 @font-face {
-  font-family: "bizd";
+  font-family: "HackGen";
   font-weight: bold;
   src: url("../fonts/HackGenConsole-Bold.ttf") format("truetype");
 }
