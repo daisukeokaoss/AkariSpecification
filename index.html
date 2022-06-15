@@ -3,26 +3,18 @@
 <head>
   <meta charset="UTF-8"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <style>
-      code {
-        background-color: #eee;
-        border-radius: 3px;
-        font-family: courier, monospace;
-        padding: 0 3px;
-      }
-      p {
-        margin-top: 2em;
-        margin-bottom: 2em;
-      }
-    </style>
-    <title>Akari the testing framework for HPC</title>
+  <link rel="stylesheet" href="/assets/css/index.css">
+  <title>Akari the testing framework for HPC</title>
 </head>
 <body>
-  <div style="width:100%;">
-    <h1 style="text-align: center;"><img src="/flower.jpg" alt="flower" style="height:1em; vertical-align: middle;" />Akari the testing framework for HPC<img src="/flower.jpg" alt="flower" style="height:1em; vertical-align: middle;
-" /></h1>
-    <div style="text-align: center; width: 100%;">
-      <img src="/AkariSpecification.jpg" alt="AkariSpecification" style="height:6em;" />
+  <div id="main">
+    <h1 class="center">
+      <img src="/assets/images/flower.jpg" alt="flower" class="flower" />
+        Akari the testing framework for HPC
+      <img src="/assets/images/flower.jpg" alt="flower" class="flower" />
+    </h1>
+    <div class="logo_wrapper">
+      <img src="/assets/images/AkariSpecification.jpg" alt="AkariSpecification"  class="logo" />
     </div>
     <h2>Akari the Testing Framework for optimizing and porting x86 Intrinsics to OpenPOWER</h2>
     <div>
@@ -33,7 +25,7 @@ Intel x86-64 CPU are everywhere. From laptop PC to supercomputer. Intel x86-64 i
     <p>
 Intrinsic functions is a way to directly access SIMD instructions from high level language like C. Intrinsic functions are specific to CPU architecture. Intel has specific intrinsic function and OpenPOWER and ARM has. And Intel intrinsic function are not 1 to 1 correspondence to other RISC intrinsic function.  So porting is needed. porting has unique wrapping structure like below.
     </p>
-    <div style="background-color: #eee;">
+    <div class="code_wrapper">
       <code>
 extern __inline __m128d __attribute__((__gnu_inline__, __always_inline__,__artificial__))<br />
 _mm_add_pd (__m128d __A, __m128d __B)<br />
@@ -48,7 +40,7 @@ Porting seems easy but one problem exist. Is behavior same? Need validating corr
       </p>
     </div>
     <div>
-      <p style="font-weight: bold;">AkariSpecification</p>
+      <p class="bold">AkariSpecification</p>
       <p>Oka Daisuke (Principal Software Developer)</p>
       <p>Akari Chang (Principal Software Developer) SHA256:BP6OOuFSr9nAkgDQLRUZ3f2tOhznOBBN0DuZIgGd5gg</p>
       <p>We are atheists, so we don't want to follow any religious leaders, but sometimes we respect what they say.</p>
@@ -68,4 +60,3 @@ Porting seems easy but one problem exist. Is behavior same? Need validating corr
 </div>
 </body>
 </html>
-
