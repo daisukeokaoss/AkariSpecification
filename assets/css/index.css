@@ -3,13 +3,16 @@
  * MIT License
  * Copyright (c) 2022 林崎 優之 (Hayashizaki Masayuki)
  **/
- @font-face {
-  font-family: 'bizd';
-  src: url('..fonts/BIZUDPGothic-Regular.ttf') format('truetype');
+@font-face {
+  font-family: "bizd";
+  src: url("..fonts/BIZUDPGothic-Regular.ttf") format("truetype");
 }
 
 * {
-  font-family: 'bizd', monospace !important;
+  font-family: "bizd", monospace !important;
+}
+ul {
+  display: block;
 }
 #main {
   width: 100%;
