@@ -1,0 +1,40 @@
+/**
+ * index.css
+ * MIT License
+ * Copyright (c) 2022 Akari Chang
+ **/
+
+#main {
+  width: 100%;
+}
+.flower {
+  height: 1em;
+  vertical-align: middle;
+}
+.center {
+  text-align: center;
+}
+.logo_wrapper {
+  text-align: center;
+  width: 100%;
+}
+.logo {
+  width: 6em;
+}
+.code_wrapper {
+  background-color: #eee;
+}
+code {
+  background-color: #eee;
+  border-radius: 3px;
+  font-family: courier, monospace;
+  padding: 0 3px;
+}
+p {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+.bold {
+  font-weight: bold;
+}
+</style>
