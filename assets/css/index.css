@@ -1,0 +1,52 @@
+/**
+ * index.css
+ * MIT License
+ * Copyright (c) 2022 林崎 優之 (Hayashizaki Masayuki)
+ **/
+@font-face {
+  font-family: "HackGen";
+  font-weight: normal;
+  src: url("../fonts/HackGenConsole-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "HackGen";
+  font-weight: bold;
+  src: url("../fonts/HackGenConsole-Bold.ttf") format("truetype");
+}
+
+* {
+  font-family: "HackGen", monospace !important;
+}
+ul {
+  margin: 0;
+  display: inline-block;
+}
+#main {
+  width: 100%;
+}
+.center {
+  text-align: center;
+}
+.logo_wrapper {
+  text-align: center;
+  width: 100%;
+}
+.logo {
+  width: 9em;
+}
+.code_wrapper {
+  background-color: #eee;
+}
+code {
+  background-color: #eee;
+  border-radius: 3px;
+  font-family: courier, monospace;
+  padding: 0 3px;
+}
+p {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+.bold {
+  font-weight: bold;
+}
