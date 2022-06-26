@@ -8,16 +8,25 @@
   </head>
   <body>
     <div id="main">
-      <h1 class="center">
-        Akari the testing framework for HPC
-      </h1>
+      <h1 class="center">Akari the testing framework for HPC</h1>
       <div class="logo_wrapper">
         <a href="https://github.com/AkariSpecification">
-          <img
-            src="/assets/images/AkariSpecification.jpg"
-            alt="AkariSpecification"
-            class="logo"
-          />
+          <p>
+            <img
+              src="/assets/images/AkariSpecification.jpg"
+              alt="AkariSpecification"
+              title="AkariSpeciifcation"
+              class="logo"
+            />
+          </p>
+          <p>
+            <img
+              src="/assets/images/AkariForest.jpg"
+              alt="AkariForest"
+              class="AkariForest"
+              title="AkariForest"
+            />
+          </p>
         </a>
       </div>
       <h2>
@@ -53,12 +62,13 @@
           other RISC intrinsic function. So porting is needed. porting has
           unique wrapping structure like below.
         </p>
-        <div class="code_wrapper" style="white-space: pre;"><code>extern __inline __m128d __attribute__((__gnu_inline__,
-__always_inline__,__artificial__))
-_mm_add_pd (__m128d __A, __m128d __B)
-{
-  return (__m128d) ((__v2df)__A + (__v2df)__B);
-}</code></div>
+        <div class="code_wrapper" style="white-space: pre">
+          <code
+            >extern __inline __m128d __attribute__((__gnu_inline__,
+            __always_inline__,__artificial__)) _mm_add_pd (__m128d __A, __m128d
+            __B) { return (__m128d) ((__v2df)__A + (__v2df)__B); }</code
+          >
+        </div>
         <div>
           <p>
             Porting seems easy but one problem exist. Is behavior same? Need
@@ -73,26 +83,21 @@ _mm_add_pd (__m128d __A, __m128d __B)
             RISC on the cloud computer by internet or other computer network.
           </p>
         </div>
-<h2>AkariSpecification Archtechture</h2>
-<div class="code_wrapper" style="white-space: pre;"><code>
-AkariSpecification Archtechture v0.0.2 2022/06/21 14:47(JST) Hayashizaki Masayuki          
-                                                                                           
-+-------------------+             +--------------------+             +--------------------+
-|  IntelCPU Server  |             |    Kafka Server    |             |  OpenPOWER Server  |
-|      x86_64       |<----------->|     LaaS(Cloud)    |<----------->|     Minicloud      |
-|  Ubuntu 20.04LTS  |             |       x86_64       |             |       ppc64        |
-|                   |<----------->|  Ubuntu 20.04LTS   |<----------->|  Ubuntu 20.04LTS   |
-|                   |  WebSocket  |                    |  WebSocket  |                    |
-+---------+---------+             +----------+---------+             +----------+---------+
-          |                                  |                                  |          
-          +---------------------------------SSH---------------------------------+          
-                                             |                                             
-                                  +----------+---------+                                   
-                                  | Central Controller |                                   
-                                  |   IntelCPU Server  |                                   
-                                  |       x86_64       |                                   
-                                  |  Ubuntu 20.04LTS   |                                   
-                                  +--------------------+                                   </code>
+        <h2>AkariSpecification Archtechture</h2>
+        <div class="code_wrapper" style="white-space: pre">
+          <code>
+            AkariSpecification Archtechture v0.0.2 2022/06/21 14:47(JST)
+            Hayashizaki Masayuki +-------------------+ +--------------------+
+            +--------------------+ | IntelCPU Server | | Kafka Server | |
+            OpenPOWER Server | | x86_64 |<----------->| LaaS(Cloud)
+            |<----------->| Minicloud | | Ubuntu 20.04LTS | | x86_64 | | ppc64 |
+            | |<----------->| Ubuntu 20.04LTS |<----------->| Ubuntu 20.04LTS |
+            | | WebSocket | | WebSocket | | +---------+---------+
+            +----------+---------+ +----------+---------+ | | |
+            +---------------------------------SSH---------------------------------+
+            | +----------+---------+ | Central Controller | | IntelCPU Server |
+            | x86_64 | | Ubuntu 20.04LTS | +--------------------+
+          </code>
         </div>
         <div>
           <p class="bold">
@@ -113,9 +118,7 @@ AkariSpecification Archtechture v0.0.2 2022/06/21 14:47(JST) Hayashizaki Masayuk
             ><br />
             SHA256:BP6OOuFSr9nAkgDQLRUZ3f2tOhznOBBN0DuZIgGd5gg
           </p>
-          <p>
-            We are only part of software developer in worldwide.
-          </p>
+          <p>We are only part of software developer in worldwide.</p>
           <p>
             We are atheists, so we don't want to follow any religious leaders,
             but sometimes we respect what they say.
@@ -135,26 +138,24 @@ AkariSpecification Archtechture v0.0.2 2022/06/21 14:47(JST) Hayashizaki Masayuk
           </p>
         </a>
         <a href="https://openpower.ic.unicamp.br/minicloud/">
-          <p>
-            Minicloud
-          </p>
+          <p>Minicloud</p>
         </a>
         <a href="https://kafka.apache.org/">
-          <p>
-            Apache Kafka
-          </p>
+          <p>Apache Kafka</p>
         </a>
-        <a href="https://openpowerfoundation.org/specifications/vectorintrinsicportingguide/">
-          <p>
-            OpenPOWER Foundation
-          </p>
+        <a
+          href="https://openpowerfoundation.org/specifications/vectorintrinsicportingguide/"
+        >
+          <p>OpenPOWER Foundation</p>
         </a>
       </div>
-      <hr/>
+      <hr />
       <div>
         <h3>OpenSources</h3>
         <p>
-          <a href="https://github.com/yuru7/HackGen/releases/tag/v2.6.3">Font: HackGen</a>
+          <a href="https://github.com/yuru7/HackGen/releases/tag/v2.6.3"
+            >Font: HackGen</a
+          >
         </p>
       </div>
     </div>
