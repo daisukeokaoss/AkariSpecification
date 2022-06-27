@@ -51,3 +51,8 @@ p {
 .bold {
   font-weight: bold;
 }
+.AkariForest {
+  max-width: 86%;
+  height: auto;
+  margin: 0 auto;
+}
