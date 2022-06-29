@@ -34,15 +34,14 @@ ul {
 .logo {
   width: 9em;
 }
-.code_wrapper {
-  background-color: #eee;
+pre {
+  word-wrap: break-word;
+  background-color: #f4f4f4;
+  padding: 10px;
+  border-radius: 4px;
 }
 code {
-  background-color: #eee;
-  border-radius: 3px;
-  font-family: courier, monospace;
-  padding: 0 3px;
-  max-width: 100%;
+  background-color: #f4f4f4;
 }
 p {
   margin-top: 2em;
