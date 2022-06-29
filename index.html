@@ -18,8 +18,6 @@
               title="AkariSpeciifcation"
               class="logo"
             />
-          </p>
-          <p>
             <img
               src="/assets/images/AkariForest.jpg"
               alt="AkariForest"
@@ -63,11 +61,13 @@
           unique wrapping structure like below.
         </p>
 <pre><code>
+                                                                                        
 extern __inline __m128d __attribute__((__gnu_inline__,__always_inline__,__artificial__))
-_mm_add_pd (__m128d __A, __m128d __B)
-{
-  return (__m128d) ((__v2df)__A + (__v2df)__B);
-}
+_mm_add_pd (__m128d __A, __m128d __B)                                                   
+{                                                                                       
+  return (__m128d) ((__v2df)__A + (__v2df)__B);                                         
+}                                                                                       
+                                                                                        
 </code></pre>
         <div>
           <p>
@@ -85,6 +85,7 @@ _mm_add_pd (__m128d __A, __m128d __B)
         </div>
         <h2>AkariSpecification Archtechture</h2>
 <pre><code>
+                                                                                                     
           AkariSpecification Archtechture v0.0.3 2022/06/27 14:37(JST) Hayashizaki Masayuki          
                                                                                                      
           +-------------------+             +--------------------+             +--------------------+
@@ -104,6 +105,7 @@ _mm_add_pd (__m128d __A, __m128d __B)
                                             |  Ubuntu 20.04LTS   |                                   
                                             |       Redis        |                                   
                                             +--------------------+                                   
+                                                                                                     
 </code></pre>
         <div>
           <p class="bold">
