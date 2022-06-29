@@ -37,21 +37,19 @@ ul {
 pre {
   word-wrap: break-word;
   background-color: #f4f4f4;
-  padding: 10px;
-  border-radius: 4px;
 }
 code {
   background-color: #f4f4f4;
 }
 p {
-  margin-top: 2em;
-  margin-bottom: 2em;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
 }
 .bold {
   font-weight: bold;
 }
 .AkariForest {
-  max-width: 300px;
+  max-width: 200px;
   height: auto;
   margin: 0 auto;
 }
