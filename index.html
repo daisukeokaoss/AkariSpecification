@@ -17,10 +17,7 @@
               alt="AkariSpecification"
               title="AkariSpeciifcation"
               class="logo"
-            />
-          </p>
-          <p>
-            <img
+            /><img
               src="/assets/images/AkariForest.jpg"
               alt="AkariForest"
               class="AkariForest"
@@ -62,13 +59,15 @@
           other RISC intrinsic function. So porting is needed. porting has
           unique wrapping structure like below.
         </p>
-      <div class="code_wrapper" style="white-space: pre;"><code>
-        extern __inline __m128d __attribute__((__gnu_inline__,__always_inline__,__artificial__))
-        _mm_add_pd (__m128d __A, __m128d __B)
-        {
-          return (__m128d) ((__v2df)__A + (__v2df)__B);
-        }
-      </code></div>
+<pre><code>
+                                                                                        
+extern __inline __m128d __attribute__((__gnu_inline__,__always_inline__,__artificial__))
+_mm_add_pd (__m128d __A, __m128d __B)                                                   
+{                                                                                       
+  return (__m128d) ((__v2df)__A + (__v2df)__B);                                         
+}                                                                                       
+                                                                                        
+</code></pre>
         <div>
           <p>
             Porting seems easy but one problem exist. Is behavior same? Need
@@ -84,9 +83,10 @@
           </p>
         </div>
         <h2>AkariSpecification Archtechture</h2>
-        <div class="code_wrapper" style="white-space: pre;"><code>
-          AkariSpecification Archtechture v0.0.2 2022/06/21 14:47(JST) Hayashizaki Masayuki          
-          
+<pre><code>
+                                                                                                     
+          AkariSpecification Archtechture v0.0.3 2022/06/27 14:37(JST) Hayashizaki Masayuki          
+                                                                                                     
           +-------------------+             +--------------------+             +--------------------+
           |  IntelCPU Server  |             |    Kafka Server    |             |  OpenPOWER Server  |
           |      x86_64       |<----------->|     LaaS(Cloud)    |<----------->|     Minicloud      |
@@ -102,8 +102,10 @@
                                             |   IntelCPU Server  |                                   
                                             |       x86_64       |                                   
                                             |  Ubuntu 20.04LTS   |                                   
-                                            +--------------------+                                   </code>
-        </div>
+                                            |       Redis        |                                   
+                                            +--------------------+                                   
+                                                                                                     
+</code></pre>
         <div>
           <p class="bold">
             <a
