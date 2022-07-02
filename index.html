@@ -8,7 +8,7 @@
   </head>
   <body>
     <div id="main">
-      <h1 class="center">Akari the testing framework for HPC</h1>
+      <h1 class="center"><a href="https://github.com/AkariSpecification/AkariTestingFramework">Akari the testing framework for HPC</a></h1>
       <div class="logo_wrapper">
         <a href="https://github.com/AkariSpecification">
           <p>
@@ -59,15 +59,11 @@
           other RISC intrinsic function. So porting is needed. porting has
           unique wrapping structure like below.
         </p>
-<pre><code>
-                                                                                        
-extern __inline __m128d __attribute__((__gnu_inline__,__always_inline__,__artificial__))
+<pre><code>extern __inline __m128d __attribute__((__gnu_inline__,__always_inline__,__artificial__))
 _mm_add_pd (__m128d __A, __m128d __B)                                                   
 {                                                                                       
   return (__m128d) ((__v2df)__A + (__v2df)__B);                                         
-}                                                                                       
-                                                                                        
-</code></pre>
+}                                                                                       </code></pre>
         <div>
           <p>
             Porting seems easy but one problem exist. Is behavior same? Need
@@ -84,8 +80,7 @@ _mm_add_pd (__m128d __A, __m128d __B)
         </div>
         <h2>AkariSpecification Archtechture</h2>
 <pre><code>
-                                                                                                     
-          AkariSpecification Archtechture v0.0.3 2022/06/27 14:37(JST) Hayashizaki Masayuki          
+          AkariSpecification Archtechture v0.0.4 2022/07/03 05:18(JST) Hayashizaki Masayuki          
                                                                                                      
           +-------------------+             +--------------------+             +--------------------+
           |  IntelCPU Server  |             |    Kafka Server    |             |  OpenPOWER Server  |
@@ -102,10 +97,9 @@ _mm_add_pd (__m128d __A, __m128d __B)
                                             |   IntelCPU Server  |                                   
                                             |       x86_64       |                                   
                                             |  Ubuntu 20.04LTS   |                                   
-                                            |       Redis        |                                   
+                                            |                    |                                   
                                             +--------------------+                                   
-                                                                                                     
-</code></pre>
+                                                                                                     </code></pre>
         <div>
           <p class="bold">
             <a
