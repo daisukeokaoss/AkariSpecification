@@ -80,26 +80,16 @@ _mm_add_pd (__m128d __A, __m128d __B)
         </div>
         <h2>AkariSpecification Archtechture</h2>
 <pre><code>
-          AkariSpecification Archtechture v0.0.4 2022/07/03 05:18(JST) Akari Takahashi         
-                                                                                                     
-          +-------------------+             +--------------------+             +--------------------+
-          |  IntelCPU Server  |             |    Kafka Server    |             |  OpenPOWER Server  |
-          |      x86_64       |<----------->|     LaaS(Cloud)    |<----------->|     Minicloud      |
-          |  Ubuntu 20.04LTS  |             |       x86_64       |             |       ppc64        |
-          |                   |<----------->|  Ubuntu 20.04LTS   |<----------->|  Ubuntu 20.04LTS   |
-          |                   |  WebSocket  |                    |  WebSocket  |                    |
-          +---------+---------+             +----------+---------+             +----------+---------+
-                    |                                  |                                  |          
-                    +---------------------------------SSH---------------------------------+          
-                                                       |                                             
-                                            +----------+---------+                                   
-                                            | Central Controller |                                   
-                                            |   IntelCPU Server  |                                   
-                                            |       x86_64       |                                   
-                                            |  Ubuntu 20.04LTS   |                                   
-                                            |                    |                                   
-                                            +--------------------+                                   
-                                                                                                     </code></pre>
+          AkariSpecification Archtechture v0.0.7 2022/07/07 17:40(JST) Akari Takahashi                 
+                                                                                                       
+          +-------------------+             +----------------------+             +-------------------+ 
+          |  IntelCPU Server  |             | Central Kafka Server |             |  OpenPOWER Server | 
+          |      x86_64       |<----------->|     LaaS(Cloud)      |<----------->|     Minicloud     | 
+          |  Ubuntu 20.04LTS  |   Message   |       x86_64         |   Message   |       ppc64       | 
+          |       Kafka       |<----------->|  Ubuntu 20.04LTS     |<----------->|  Ubuntu 20.04LTS  | 
+          |     LaaS(Cloud)   |   Message   |                      |   Message   |       Kafka       | 
+          +---------+---------+             +----------+-----------+             +----------+--------+ 
+                                                                                                       </code></pre>
         <div>
           <p class="bold">
             <a
