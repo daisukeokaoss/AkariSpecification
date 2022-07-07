@@ -80,14 +80,14 @@ _mm_add_pd (__m128d __A, __m128d __B)
         </div>
         <h2>AkariSpecification Archtechture</h2>
 <pre><code>
-          AkariSpecification Archtechture v0.0.7 2022/07/07 17:40(JST) Akari Takahashi                 
+          AkariSpecification Archtechture v0.0.8 2022/07/07 21:00(JST) Takahashi Akari                 
                                                                                                        
           +-------------------+             +----------------------+             +-------------------+ 
           |  IntelCPU Server  |             | Central Kafka Server |             |  OpenPOWER Server | 
-          |      x86_64       |<----------->|     LaaS(Cloud)      |<----------->|     Minicloud     | 
-          |  Ubuntu 20.04LTS  |   Message   |       x86_64         |   Message   |       ppc64       | 
-          |       Kafka       |<----------->|  Ubuntu 20.04LTS     |<----------->|  Ubuntu 20.04LTS  | 
-          |     LaaS(Cloud)   |   Message   |                      |   Message   |       Kafka       | 
+          |       VPS         |             |         VPS          |             |     Minicloud     | 
+          |      x86_64       +<--Message-->+       x86_64         +<--Message-->|       ppc64       | 
+          |  Ubuntu 20.04LTS  |     TCP     |  Ubuntu 20.04LTS     |     TCP     |  Ubuntu 20.04LTS  | 
+          |      Kafka        |             |        Kafka         |             |       Kafka       | 
           +---------+---------+             +----------+-----------+             +----------+--------+ 
                                                                                                        </code></pre>
         <div>
