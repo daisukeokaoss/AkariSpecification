@@ -1,7 +1,7 @@
 /**
  * index.css
  * MIT License
- * Copyright (c) 2022 林崎 優之 (Hayashizaki Masayuki)
+ * Copyright (c) 2022 Takahashi Akari <https://akari.mn>
  **/
 @font-face {
   font-family: "HackGen";
@@ -13,7 +13,6 @@
   font-weight: bold;
   src: url("../fonts/HackGenConsole-Bold.ttf") format("truetype");
 }
-
 * {
   font-family: "HackGen", monospace !important;
 }

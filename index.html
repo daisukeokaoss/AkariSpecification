@@ -8,17 +8,17 @@
   </head>
   <body>
     <div id="main">
-      <h1 class="center">Akari the testing framework for HPC</h1>
+      <h1 class="center"><a href="https://github.com/AkariSpecification/AkariTestingFramework">Akari the testing framework for HPC</a></h1>
       <div class="logo_wrapper">
         <a href="https://github.com/AkariSpecification">
           <p>
             <img
-              src="/assets/images/AkariSpecification.jpg"
+              src="./assets/images/AkariSpecification.jpg"
               alt="AkariSpecification"
               title="AkariSpeciifcation"
               class="logo"
             /><img
-              src="/assets/images/AkariForest.jpg"
+              src="./assets/images/AkariForest.jpg"
               alt="AkariForest"
               class="AkariForest"
               title="AkariForest"
@@ -59,15 +59,11 @@
           other RISC intrinsic function. So porting is needed. porting has
           unique wrapping structure like below.
         </p>
-<pre><code>
-                                                                                        
-extern __inline __m128d __attribute__((__gnu_inline__,__always_inline__,__artificial__))
+<pre><code>extern __inline __m128d __attribute__((__gnu_inline__,__always_inline__,__artificial__))
 _mm_add_pd (__m128d __A, __m128d __B)                                                   
 {                                                                                       
   return (__m128d) ((__v2df)__A + (__v2df)__B);                                         
-}                                                                                       
-                                                                                        
-</code></pre>
+}                                                                                       </code></pre>
         <div>
           <p>
             Porting seems easy but one problem exist. Is behavior same? Need
@@ -84,28 +80,16 @@ _mm_add_pd (__m128d __A, __m128d __B)
         </div>
         <h2>AkariSpecification Archtechture</h2>
 <pre><code>
-                                                                                                     
-          AkariSpecification Archtechture v0.0.3 2022/06/27 14:37(JST) Hayashizaki Masayuki          
-                                                                                                     
-          +-------------------+             +--------------------+             +--------------------+
-          |  IntelCPU Server  |             |    Kafka Server    |             |  OpenPOWER Server  |
-          |      x86_64       |<----------->|     LaaS(Cloud)    |<----------->|     Minicloud      |
-          |  Ubuntu 20.04LTS  |             |       x86_64       |             |       ppc64        |
-          |                   |<----------->|  Ubuntu 20.04LTS   |<----------->|  Ubuntu 20.04LTS   |
-          |                   |  WebSocket  |                    |  WebSocket  |                    |
-          +---------+---------+             +----------+---------+             +----------+---------+
-                    |                                  |                                  |          
-                    +---------------------------------SSH---------------------------------+          
-                                                       |                                             
-                                            +----------+---------+                                   
-                                            | Central Controller |                                   
-                                            |   IntelCPU Server  |                                   
-                                            |       x86_64       |                                   
-                                            |  Ubuntu 20.04LTS   |                                   
-                                            |       Redis        |                                   
-                                            +--------------------+                                   
-                                                                                                     
-</code></pre>
+          AkariSpecification Archtechture v0.0.7 2022/07/07 17:40(JST) Akari Takahashi                 
+                                                                                                       
+          +-------------------+             +----------------------+             +-------------------+ 
+          |  IntelCPU Server  |             | Central Kafka Server |             |  OpenPOWER Server | 
+          |      x86_64       |<----------->|     LaaS(Cloud)      |<----------->|     Minicloud     | 
+          |  Ubuntu 20.04LTS  |   Message   |       x86_64         |   Message   |       ppc64       | 
+          |       Kafka       |<----------->|  Ubuntu 20.04LTS     |<----------->|  Ubuntu 20.04LTS  | 
+          |     LaaS(Cloud)   |   Message   |                      |   Message   |       Kafka       | 
+          +---------+---------+             +----------+-----------+             +----------+--------+ 
+                                                                                                       </code></pre>
         <div>
           <p class="bold">
             <a
@@ -115,15 +99,14 @@ _mm_add_pd (__m128d __A, __m128d __B)
           </p>
           <p>
             <a href="https://github.com/daisukeokaoss"
-              >岡 大輔 / Oka Daisuke (Principal Software Developer)</a
+              >Oka Daisuke (Principal Developer)</a
             >
           </p>
           <p>
-            <a href="https://github.com/hayashizaki-masayuki"
-              >林崎 優之 / Hayashizaki Masayuki (Principal Software
-              Developer)</a
-            ><br />
-            SHA256:BP6OOuFSr9nAkgDQLRUZ3f2tOhznOBBN0DuZIgGd5gg
+            <a href="https://github.com/takahashi-akari">
+              Takahashi Akari (Principal Developer)
+            </a><br/>
+            9DD8 F529 83A0 3182 D318  6184 9309 E8D2 2FD4 4365<br/>
           </p>
           <p>We are only part of software developer in worldwide.</p>
           <p>
@@ -131,13 +114,14 @@ _mm_add_pd (__m128d __A, __m128d __B)
             but sometimes we respect what they say.
           </p>
           <p>
-            <a href="mailto:info@akari.mn"> Send email </a>
-          </p>
+            <a href="mailto:akaritakahashioss@gmail.com"> Send email </a>
+          </p><br />
         </div>
       </div>
       <hr />
       <div>
         <h2>Links</h2>
+        <a href="https://github.com/AkariSpecification/AkariTestingFramework">AkariTestingFramework</a>
         <a href="https://arxiv.org/abs/2001.09258">
           <p>
             SLEEF: A Portable Vectorized Library of C Standard Mathematical
