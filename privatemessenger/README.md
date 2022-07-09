@@ -20,11 +20,12 @@ OpenJDK 64-Bit Server VM (build 25.312-b07, mixed mode)
 ~~~
 # PrivateMessenger-Client
 ~~~
-+----------------------+          +--------------------------+          +----------------------+
-|    Linux Client      |   TCP    |   Central Kafka Server   |   TCP    |    Linux Client      |
-|   ClientSoftware     +<-------->+    RealTimeMessaging     +<-------->|   ClientSoftware     +
-|Ubuntu 20.04LTS x86_64| Messages |  Ubuntu 20.04LTS  x86_64 | Messages |Ubuntu 20.04LTS x86_64|
-+----------------------+          +--------------------------+          +----------------------+ 
++----------------------+          +---------------------------+          +----------------------+
+|   Linux Client(GUI)  |   TCP    | Central Kafka Server(CUI) |   TCP    |   Linux Client(GUI)  |
+|ClientSoftware(JFrame)+<-------->+    RealTimeMessaging      +<-------->+ClientSoftware(JFrame)|
+|Ubuntu 20.04LTS x86_64| Messages |       KafkaServer         | Messages |Ubuntu 20.04LTS x86_64| 
+|       Desktop        |          |  Ubuntu 20.04LTS  x86_64  |          |       Desktop        |
++----------------------+          +---------------------------+          +----------------------+ 
 ~~~
 
 - [PrivateMessenger-Client](https://github.com/takahashi-akari/PrivateMessenger-Client)
@@ -60,7 +61,7 @@ $ java -jar target/PrivateMessenger-Server-x.x.x-jar-with-dependencies.jar
 # Links
 - [Kafka](https://kafka.apache.org/)
 - [PrivateMessenger](https://github.com/takahashi-akari/PrivateMessenger)
-- [PrivateMesenger-Client](https://github.com/takahashi-akari/PrivateMessenger-Client)
+- [PrivateMessenger-Client](https://github.com/takahashi-akari/PrivateMessenger-Client)
 - [PrivateMessenger-Server](https://github.com/takahashi-akari/PrivateMessenger-Server)
 - [JFrame OpenJDK](https://www.openjdk.java.net/projects/javafx/javafx-swing-components.html)
 - [Kafka Server](https://kafka.apache.org/documentation/)
