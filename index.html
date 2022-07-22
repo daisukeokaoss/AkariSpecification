@@ -80,15 +80,27 @@ _mm_add_pd (__m128d __A, __m128d __B)
         </div>
         <h2>AkariSpecification Archtechture</h2>
 <pre><code>
-          AkariSpecification Archtechture v0.1.0 2022/07/08 09:00(JST) Hayashizaki Masayuki           
-                                                                                                       
-          +-------------------+             +----------------------+             +-------------------+ 
-          |  IntelCPU Server  |             | Central Kafka Server |             |  OpenPOWER Server | 
-          |       VPS         |             |         VPS          |             |     Minicloud     | 
-          |      x86_64       +<--Message-->+       x86_64         +<--Message-->+       ppc64       | 
-          |  Ubuntu 20.04LTS  |     TCP     |  Ubuntu 20.04LTS     |     TCP     |  Ubuntu 20.04LTS  | 
-          |      Kafka        |             |        Kafka         |             |       Kafka       | 
-          +-------------------+             +----------------------+             +-------------------+ 
+          AkariSpecification Archtechture v0.1.1 2022/07/23 09:00(JST) Hayashizaki Masayuki           
+                                                                                                      
+          +-------------------+             +----------------------+             +-------------------+
+          |  IntelCPU Server  |             | Central Kafka Server |             |  OpenPOWER Server |
+          |       VPS         |             |         VPS          |             |     Minicloud     |
+          |      x86_64       +<--Message-->+       x86_64         +<--Message-->+       ppc64       |
+          |  Ubuntu 20.04LTS  |  WebSocket  |  Ubuntu 20.04LTS     |  WebSocket  |  Ubuntu 20.04LTS  |
+          |                   |     SSL     |        Kafka         |     SSL     |                   |
+          |                   |             |      ZooKeeper       |             |                   |
+          +---------+---------+             +----------+-----------+             +---------+---------+
+                    |                                  |                                   |          
+                    +----------------------------------+-----------------------------------+          
+                                                       |                                              
+                                                      SSH                                             
+                                                       |                                              
+                                            +----------+---------+                                    
+                                            |   Admin Computer   |                                    
+                                            |      ClientPC      |                                    
+                                            |       x86_64       |                                    
+                                            |   Ubuntu 22.04LTS  |                                    
+                                            +--------------------+                                    
                                                                                                       </code></pre>
         <div>
           <p class="bold">
