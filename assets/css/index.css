@@ -13,11 +13,6 @@
   font-weight: bold;
   src: url("../fonts/HackGenConsole-Bold.ttf") format("truetype");
 }
-@font-face {
-  font-family: "HackGen";
-  font-weight: italic;
-  src: url("../fonts/HackGenConsole-Italic.ttf") format("truetype");
-}
 * {
   box-sizing: border-box;
 }
