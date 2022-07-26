@@ -13,42 +13,110 @@
   font-weight: bold;
   src: url("../fonts/HackGenConsole-Bold.ttf") format("truetype");
 }
+@font-face {
+  font-family: "HackGen";
+  font-weight: italic;
+  src: url("../fonts/HackGenConsole-Italic.ttf") format("truetype");
+}
 * {
-  font-family: "HackGen", monospace !important;
+  box-sizing: border-box;
 }
-ul {
+
+body {
   margin: 0;
-  display: inline-block;
+  padding: 0;
+  font-family: "HackGen", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  background-color: #fff;
 }
-#main {
+
+.main {
   width: 100%;
-}
-.center {
-  text-align: center;
-}
-.logo_wrapper {
-  text-align: center;
-  width: 100%;
-}
-.logo {
-  width: 9em;
-}
-pre {
-  word-wrap: break-word;
-  background-color: #f4f4f4;
-}
-code {
-  background-color: #f4f4f4;
-}
-p {
-  margin-top: 2em;
-  margin-bottom: 2em;
-}
-.bold {
-  font-weight: bold;
-}
-.AkariForest {
-  max-width: 200px;
-  height: auto;
+  max-width: 1200px;
   margin: 0 auto;
+  padding: 0 20px;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.row h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.row h2 {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.row .logo_wrapper {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.row .logo_wrapper img {
+  width: 15%;
+  display: inline;
+}
+
+.row text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.row code {
+  font-family: "HackGen", sans-serif;
+  font-size: 16px;
+  line-height: 1.0;
+  color: #FFF;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+.row pre {
+  background-color: #333;
+}
+.row .member {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+/* footer */
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  text-align: center;
+}
+
+hr {
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
 }
