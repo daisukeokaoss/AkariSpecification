@@ -107,6 +107,18 @@ body {
   align-items: center;
   margin-bottom: 20px;
 }
+.row .link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.row .opensource {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
 /* footer */
 .footer {
   display: flex;
