@@ -3,34 +3,48 @@
   <head>
     <meta charset="UTF-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="ie=edge" http-equiv="x-ua-compatible" />
+    <!-- Bootstrap -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <link href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" rel="stylesheet" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700&display=swap" rel="stylesheet" />
+    <!-- Franklin Gothic Medium -->
+    <link href="https://fonts.googleapis.com/css?family=Franklin+Gothic+Medium&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="/assets/css/index.css" />
     <title>Akari the testing framework for HPC</title>
   </head>
   <body>
-    <div id="main">
-      <h1 class="center"><a href="https://github.com/AkariSpecification">Akari the testing framework for HPC</a></h1>
-      <div class="logo_wrapper">
-        <a href="https://github.com/AkariSpecification">
-          <p>
+    <div class="container main">
+      <div class="row h1">
+        <div class="col-md-12">
+          <h1><a href="https://github.com/AkariSpecification">Akari the testing framework for HPC</a></h1>
+        </div>
+        <div class="row logo_wrapper">
+          <div class="col-md-12">
             <img
               src="./assets/images/AkariSpecification.jpg"
               alt="AkariSpecification"
               title="AkariSpeciifcation"
               class="logo"
-            /><img
+            />
+            <img
               src="./assets/images/AkariForest.jpg"
               alt="AkariForest"
               class="AkariForest"
               title="AkariForest"
             />
-          </p>
-        </a>
+          </div>
+        </div>
+        <hr />
+        <div class="row h2">
+          <div class="col-md-12">
+            <h2>
+              Akari the Testing Framework for optimizing and porting x86 Intrinsics to OpenPOWER
+            </h2>
+          </div>
+        </div>
       </div>
-      <h2>
-        Akari the Testing Framework for optimizing and porting x86 Intrinsics to
-        OpenPOWER
-      </h2>
-      <div>
+      <div class="row text">
         <p>
           Intel x86-64 CPU are everywhere. From laptop PC to supercomputer.
           Intel x86-64 is CISC(Complex Instruction Set Computer) and very long
@@ -50,7 +64,6 @@
           Systems.But porting Intel x86 Intrinsics to OpenPOWER Intrinsics is
           technically challenging.
         </p>
-
         <p>
           Intrinsic functions is a way to directly access SIMD instructions from
           high level language like C. Intrinsic functions are specific to CPU
@@ -59,12 +72,18 @@
           other RISC intrinsic function. So porting is needed. porting has
           unique wrapping structure like below.
         </p>
+      </div>
+      <div class="row code">
+        <div class="col-md-12">
 <pre><code>extern __inline __m128d __attribute__((__gnu_inline__,__always_inline__,__artificial__))
 _mm_add_pd (__m128d __A, __m128d __B)                                                   
 {                                                                                       
   return (__m128d) ((__v2df)__A + (__v2df)__B);                                         
 }                                                                                       </code></pre>
-        <div>
+</div>
+      </div>
+      <div class="row text">
+        <div class="col-md-12">
           <p>
             Porting seems easy but one problem exist. Is behavior same? Need
             validating correctness of porting. But we cannot make sure porting
@@ -78,35 +97,70 @@ _mm_add_pd (__m128d __A, __m128d __B)
             RISC on the cloud computer by internet or other computer network.
           </p>
         </div>
-        <h2>AkariSpecification Archtechture</h2>
+      </div>
+      <hr />
+      <div class="row h2">
+        <div class="col-md-12">
+          <h2>
+            AkariSpecification Architecture
+          </h2>
+        </div>
+      </div>
+      <div class="row code">
+        <div class="col-md-12">
 <pre><code>
-          AkariSpecification Archtechture v0.1.0 2022/07/08 09:00(JST) Hayashizaki Masayuki           
-                                                                                                       
-          +-------------------+             +----------------------+             +-------------------+ 
-          |  IntelCPU Server  |             | Central Kafka Server |             |  OpenPOWER Server | 
-          |       VPS         |             |         VPS          |             |     Minicloud     | 
-          |      x86_64       +<--Message-->+       x86_64         +<--Message-->+       ppc64       | 
-          |  Ubuntu 20.04LTS  |     TCP     |  Ubuntu 20.04LTS     |     TCP     |  Ubuntu 20.04LTS  | 
-          |      Kafka        |             |        Kafka         |             |       Kafka       | 
-          +-------------------+             +----------------------+             +-------------------+ 
-                                                                                                      </code></pre>
-        <div>
-          <p class="bold">
+AkariSpecification Architecture v0.1.1 2022/07/23 09:00(JST) Hayashizaki Masayuki           
+                                                                                            
++-------------------+             +----------------------+             +-------------------+
+|  IntelCPU Server  |             | Central Kafka Server |             |  OpenPOWER Server |
+|       VPS         |             |         VPS          |             |     Minicloud     |
+|      x86_64       +<--Message-->+       x86_64         +<--Message-->+       ppc64       |
+|  Ubuntu 20.04LTS  |  WebSocket  |  Ubuntu 20.04LTS     |  WebSocket  |  Ubuntu 20.04LTS  |
+|                   |     SSL     |        Kafka         |     SSL     |                   |
+|                   |             |      ZooKeeper       |             |                   |
++---------+---------+             +----------+-----------+             +---------+---------+
+          |                                  |                                   |          
+          +----------------------------------+-----------------------------------+          
+                                             |                                              
+                                            SSH                                             
+                                             |                                              
+                                  +----------+---------+                                    
+                                  |   Admin Computer   |                                    
+                                  |      ClientPC      |                                    
+                                  |       x86_64       |                                    
+                                  |   Ubuntu 22.04LTS  |                                    
+                                  +--------------------+                                    
+                                                                                            </code></pre>
+        </div>
+      </div>
+      <hr />
+      <div class="row h2">
+        <div class="col-md-12">
+          <h2>
             <a
               href="https://github.com/AkariSpecification"
-              AkariSpecification
-            ></a>
-          </p>
-          <p>
-            <a href="https://github.com/daisukeokaoss"
-              >Oka Daisuke (Principal Developer)</a
-            >
-          </p>
-          <p>
-            <a href="https://github.com/hayashizaki-masayuki">
-              Hayashizaki Masayuki (Principal Developer)
-            </a>
-          </p>
+            >AkariSpecification Member</a>     
+          </h2>
+        </div>
+      </div>
+      <div class="row member">
+        <div class="col-md-12">
+          <ul style="font-size: 20px; font-weight: bold;">
+            <li>
+              <a href="https://github.com/daisukeokaoss">
+                Oka Daisuke (Principal Developer)
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/hayashizaki-masayuki">
+                Hayashizaki Masayuki (Principal Developer)
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="row description">
+        <div class="col-md-12" style="padding:0 30px;">
           <p>We are only part of software developer in worldwide.</p>
           <p>
             We are atheists, so we don't want to follow any religious leaders,
@@ -115,35 +169,76 @@ _mm_add_pd (__m128d __A, __m128d __B)
         </div>
       </div>
       <hr />
-      <div>
-        <h2>Links</h2>
-        <a href="https://arxiv.org/abs/2001.09258">
-          <p>
-            SLEEF: A Portable Vectorized Library of C Standard Mathematical
-            Functions
-          </p>
-        </a>
-        <a href="https://openpower.ic.unicamp.br/minicloud/">
-          <p>Minicloud</p>
-        </a>
-        <a href="https://kafka.apache.org/">
-          <p>Apache Kafka</p>
-        </a>
-        <a
-          href="https://openpowerfoundation.org/specifications/vectorintrinsicportingguide/"
-        >
-          <p>OpenPOWER Foundation</p>
-        </a>
+      <div class="row h2">
+        <div class="col-md-12">
+          <h2>Links</h2>
+        </div>
+      </div>
+      <div class="row links">
+        <div class="col-md-12">
+          <ul>
+            <li>
+              <a href="https://kafkabot.akari.mn/">
+                Apache Kafka Chatbot - akari.mn
+              </a>
+            </li>
+            <li>
+              <a href="https://arxiv.org/abs/2001.09258">
+                SLEEF: A Portable Vectorized Library of C Standard Mathematical
+                Functions
+              </a>
+            </li>
+            <li>
+              <a href="https://openpower.ic.unicamp.br/minicloud/">
+                Minicloud
+              </a>
+            </li>
+            <li>
+              <a href="https://kafka.apache.org/">
+                Apache Kafka
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://openpowerfoundation.org/specifications/vectorintrinsicportingguide/"
+              >
+                OpenPOWER Foundation
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
       <hr />
-      <div>
-        <h3>OpenSources</h3>
-        <p>
-          <a href="https://github.com/yuru7/HackGen/releases/tag/v2.6.3"
-            >Font: HackGen</a
-          >
-        </p>
+      <div class="row h2">
+        <div class="col-md-12">
+          <h2>
+            OpenSource
+          </h2>
+        </div>
+      </div>
+      <div class="row opensource">
+        <div class="col-md-12">
+          <ul>
+            <li>
+              <a href="https://github.com/yuru7/HackGen/releases/tag/v2.6.3">
+                HackGen
+              </a>
+            </li>
+          </div>
+        </div>
+      </div>
+      <!-- footer -->
+      <hr />
+      <div class="row footer">
+        <div class="col-md-12">
+          <p>
+            This website is developed by <a href="https://github.com/AkariSpecification">AkariSpecification</a>.
+          </p>
+        </div>
       </div>
     </div>
+  </div>
+  <!-- Boostrap -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   </body>
 </html>
