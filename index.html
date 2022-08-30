@@ -109,28 +109,28 @@ _mm_add_pd (__m128d __A, __m128d __B)
       <div class="row code">
         <div class="col-md-12">
 <pre><code>
-AkariSpecification Architecture v0.1.1 2022/07/23 09:00(JST) Hayashizaki Masayuki           
+AkariSpecification Architecture v0.1.2 2022/08/30 09:00(JST) Hayashizaki Masayuki           
                                                                                             
-+-------------------+             +----------------------+             +-------------------+
-|  IntelCPU Server  |             | Central Kafka Server |             |  OpenPOWER Server |
-|       VPS         |             |         VPS          |             |     Minicloud     |
-|      x86_64       +<--Message-->+       x86_64         +<--Message-->+       ppc64       |
-|  Ubuntu 20.04LTS  |  WebSocket  |  Ubuntu 20.04LTS     |  WebSocket  |  Ubuntu 20.04LTS  |
-|                   |     SSL     |        Kafka         |     SSL     |                   |
-|                   |             |      ZooKeeper       |             |                   |
-+---------+---------+             +----------+-----------+             +---------+---------+
-          |                                  |                                   |          
-          +----------------------------------+-----------------------------------+          
-                                             |                                              
-                                            SSH                                             
-                                             |                                              
-                                  +----------+---------+                                    
-                                  |   Admin Computer   |                                    
-                                  |      ClientPC      |                                    
-                                  |       x86_64       |                                    
-                                  |   Ubuntu 22.04LTS  |                                    
-                                  +--------------------+                                    
-                                                                                            </code></pre>
++-------------------+               +----------------------+               +-------------------+
+|  IntelCPU Server  |               |    Central Server    |               |  OpenPOWER Server |
+|       VPS         |               |         VPS          |               |     Minicloud     |
+|      x86_64       +<-SSH or SCP ->+       x86_64         +<-SSH or SCP-->+       ppc64       |
+|  Ubuntu 20.04LTS  |               |  Ubuntu 20.04LTS     |               |  Ubuntu 20.04LTS  |
+|        GCC        |               |        Python        |               |        GCC        |
+|                   |               |        Fabric        |               |                   |
++---------+---------+               +----------+-----------+               +---------+---------+
+          |                                   |                                      |          
+          +-----------------------------------+--------------------------------------+          
+                                              |                                                 
+                                          SSH or SCP                                            
+                                              |                                                 
+                                   +----------+---------+                                       
+                                   |   Admin Computer   |                                       
+                                   |      ClientPC      |                                       
+                                   |       x86_64       |                                       
+                                   |   Ubuntu 22.04LTS  |                                       
+                                   +--------------------+                                       
+                                                                                                </code></pre>
         </div>
       </div>
       <hr />
